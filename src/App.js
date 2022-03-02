@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { Component } from 'react';
+import Navigation from './Navigation/Navigation'
 
 // // const pickedStocks = async () => {
 // //   return 
@@ -28,6 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navigation />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>

@@ -1,0 +1,22 @@
+.navigation {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.navigation-links {
+  font-size: 20px;
+}
+
+.separator {
+  color: rgb(239, 54, 246);
+  font-weight: 600;
+}
