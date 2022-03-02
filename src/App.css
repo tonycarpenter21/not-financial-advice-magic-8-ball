@@ -1,6 +1,12 @@
+@import-normalize;
+
+body {
+  background: -webkit-radial-gradient(center top, rgb(239, 54, 246), rgb(1, 1, 1));
+  height: 100vh;
+}
+
 .App {
   text-align: center;
-  background: -webkit-radial-gradient(center top, rgb(239, 54, 246), rgb(1, 1, 1));
 }
 
 .App-logo {
