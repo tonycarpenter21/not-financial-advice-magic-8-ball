@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="navigation-link">
          HOME
         </div>
-        <div className="separator">|</div>
+        <div className="separator"></div>
         <div className="navigation-link">
          FAVORITES
         </div> 

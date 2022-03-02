@@ -14,12 +14,15 @@ const HomeView = () => {
       </div>
       <div className="eight-ball-container">
         <div className="ball">
+        <div className="eight hidden">
+          8
         </div>
-        <div className="window">
+        <div className="window ">
           <div className="eight-ball-message">
             Buy APPL Stock
             <button className="favorite-button">Favorite</button>
           </div>
+        </div>
         </div>
       </div>
       <div className="advice-type-container">

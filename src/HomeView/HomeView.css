@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 20px;
+  height: 85vh;
 }
 
 .welcome-message, 
@@ -15,7 +17,6 @@
   color: #FFFFFF;
   border-radius: 20px;
   padding: 20px;
-  margin-bottom: 20px;
   z-index: 2
 }
 
@@ -31,6 +32,9 @@
 }
 
 .ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 70vh;
   width: 70vh;
   background-color: #000000;
@@ -39,6 +43,7 @@
   z-index: 1;
 }
 
+.eight,
 .window {
   display: flex;
   justify-content: center;
@@ -48,20 +53,23 @@
   border-radius: 50%;
   height: 30vh;
   width: 30vh;
-  margin-bottom: 20px;
   z-index: 2;
-  position: relative;
-  bottom: 42.5vh;
+}
+
+.eight {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-size: 200px;
+  font-weight: 700;
 }
 
 .eight-ball-message{
   max-width: 200px;
-  margin-bottom: 0px; 
+  margin: 0px;
 }
 
 .advice-type-container {
-  position: relative;
-  bottom: 30vh;
+  /* margin: -8vh; */
 }
 
 .advice-type-button-container {
@@ -96,3 +104,6 @@
   background-image: -webkit-linear-gradient(rgb(239, 54, 246), rgb(135, 0, 155));
 }
 
+.hidden {
+  display: none;
+}
