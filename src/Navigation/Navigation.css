@@ -10,13 +10,26 @@
 .logo {
   font-size: 30px;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .navigation-links {
+  display: flex;
   font-size: 20px;
+  border-bottom: 3px solid #000000;
+}
+
+.navigation-link {
+  border-bottom: 3px solid #000000;
+}
+
+.navigation-link:hover {
+  border-bottom: 3px solid rgb(239, 54, 246);
+  cursor: pointer;
 }
 
 .separator {
   color: rgb(239, 54, 246);
   font-weight: 600;
+  margin: 0px 10px;
 }

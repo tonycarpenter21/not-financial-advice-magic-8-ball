@@ -6,7 +6,13 @@ const Navigation = () => {
     <nav className="navigation">
       <div className="logo">Not Financial Advice Magic 8 Ball</div>
       <div className="navigation-links">
-        HOME <span className="separator">|</span> FAVORITES
+        <div className="navigation-link">
+         HOME
+        </div>
+        <div className="separator">|</div>
+        <div className="navigation-link">
+         FAVORITES
+        </div> 
       </div>
     </nav>
   )

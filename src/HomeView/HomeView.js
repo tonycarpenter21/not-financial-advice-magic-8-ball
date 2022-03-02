@@ -1,4 +1,5 @@
 import './HomeView.css'
+import React from 'react'
 
 const HomeView = () => {
   return(
@@ -11,8 +12,15 @@ const HomeView = () => {
           This tool is an excellent way find out about different investment strategies or new topics to research. None of it’s recommendations should be taken as financial advice. May the odds be ever in your favor.
         </div>
       </div>
-      <div className="eight-ball">
-        8BALL GOES HERE
+      <div className="eight-ball-container">
+        <div className="ball">
+        </div>
+        <div className="window">
+          <div className="eight-ball-message">
+            Buy APPL Stock
+            <button className="favorite-button">Favorite</button>
+          </div>
+        </div>
       </div>
       <div className="advice-type-container">
         Pick Your Investment Inspiration Type:
