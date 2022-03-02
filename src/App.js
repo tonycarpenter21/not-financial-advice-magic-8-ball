@@ -3,6 +3,7 @@ import './App.css';
 import React, { Component } from 'react';
 import Navigation from './Navigation/Navigation'
 import HomeView from './HomeView/HomeView'
+import FavoritesView from './FavoritesView/FavoritesView';
 
 // // const pickedStocks = async () => {
 // //   return 
@@ -31,7 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        <HomeView />
+        {/* <HomeView /> */}
+        <FavoritesView />
       </div>
     );
   }
