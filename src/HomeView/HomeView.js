@@ -7,11 +7,11 @@ let stockTips = [
   "Buy ____ Calls",
   "Buy OTM 1 DTE ____ Calls",
   "Costanza Method: Research ____, Come To A Conclusion, and Do The Opposite",
-  "Buy Gold",
-  "Liquidate Your 401k To Buy GameStop Shares",
-  "Buy Coinbase Shares Because Buying Crypto Is Complicated",
-  "Buy Whatever People On Reddit Say To Buy",
-  "Open a Buy Limit Order and Let Your Cat Walk Across Your Keyboard",
+  // "Buy Gold",
+  // "Liquidate Your 401k To Buy GameStop Shares",
+  // "Buy Coinbase Shares Because Buying Crypto Is Complicated",
+  // "Buy Whatever People On Reddit Say To Buy",
+  // "Open a Buy Limit Order and Let Your Cat Walk Across Your Keyboard",
 ]
 
 let cryptoTips = [
