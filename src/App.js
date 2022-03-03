@@ -26,7 +26,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      
+      favoriteTips: [
+        {id: 1, tip: "Buy Apple Stock"},
+        {id: 1, tip: "Buy gold"},
+        {id: 1, tip: "Buy Silver"},
+      ]
     }
   }
 
@@ -37,7 +41,9 @@ class App extends Component {
           <Navigation />
           <Switch>
             <Route path="/" exact component={HomeView} />
-            <Route path="/favorites" component={FavoritesView} />
+            <Route path="/favorites" >
+              <FavoritesView favorites={this.state.favoriteTips} />
+            </Route>/>
             <Route path="*" component={PageNotFound} />
           </Switch>
         </div>

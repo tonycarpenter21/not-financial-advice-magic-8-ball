@@ -6,7 +6,7 @@ let stockTips = [
   "Buy ____ Puts",
   "Buy ____ Calls",
   "Buy OTM 1 DTE ____ Calls",
-  "Costanza Method: Research ____, Come To A Conclusion, and Do The Opposite",
+  "Costanza Method: Research ____, Decide on Puts or Calls, and Buy The Opposite",
   // "Buy Gold",
   // "Liquidate Your 401k To Buy GameStop Shares",
   // "Buy Coinbase Shares Because Buying Crypto Is Complicated",
@@ -15,7 +15,7 @@ let stockTips = [
 ]
 
 let cryptoTips = [
-  "Mortgage Your Home For NFTs Of Cartoon Monkeys",
+  "Mortgage Your Home To Buy NFTs Of Cartoon Monkeys",
   "Buy Bitcoin Futures With 5x+ Leverage",
   "Ask For Your Inheritance Early and Buy Crypto With A Dog On It",
   "Buy Whatever People On Reddit Say To Buy", 

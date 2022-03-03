@@ -2,8 +2,7 @@
 padding: 20px;
 }
 
-.favorites-message, 
-.favorite-card {
+.favorites-message {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,42 +17,4 @@ padding: 20px;
   justify-content: space-evenly;
   flex-wrap: wrap;
   margin: 20px 0px;
-}
-
-.favorite-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0px;
-  min-width: 25%;
-}
-
-.title {
-  font-weight: 800;
-  font-size: 20px;
-}
-
-.description {
-  margin-top: 20px;
-}
-
-.remove-idea-button-container {
-  display: flex;
-  width: 100%;
-  justify-content: end;
-  background-color: #00000000;
-  border: 0px solid #00000000;
-  cursor: pointer;
-  margin-bottom: -24px;
-  padding: 0px;
-}
-
-.remove-idea-button {
-  border-radius: 5px;
-  background-color: #FFFFFF44;
-}
-
-.remove-idea-button:hover {
-  filter: brightness(5);
-  background-color: #FFFFFF77;
 }
