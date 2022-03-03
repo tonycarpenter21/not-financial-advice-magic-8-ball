@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import Navigation from './Navigation/Navigation'
 import HomeView from './HomeView/HomeView'
 import FavoritesView from './FavoritesView/FavoritesView';
+import PageNotFound from './PageNotFound/PageNotFound';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 // // const pickedStocks = async () => {
 // //   return 
@@ -30,11 +32,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Navigation />
-        <HomeView />
-        {/* <FavoritesView /> */}
-      </div>
+      <Router>
+        <div className="App">
+          <Navigation />
+          <Switch>
+            <Route path="/" exact component={HomeView} />
+            <Route path="/favorites" component={FavoritesView} />
+            <Route path="*" component={PageNotFound} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
