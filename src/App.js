@@ -32,8 +32,8 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
-        {/* <HomeView /> */}
-        <FavoritesView />
+        <HomeView />
+        {/* <FavoritesView /> */}
       </div>
     );
   }
