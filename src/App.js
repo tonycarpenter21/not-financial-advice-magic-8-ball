@@ -34,16 +34,22 @@ class App extends Component {
     }
   }
 
+  addFavorite = (newFavorite) => {
+    this.setState( {favoriteTips: [... this.state.favoriteTips, newFavorite]} )
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <Navigation />
           <Switch>
-            <Route path="/" exact component={HomeView} />
+            <Route path="/" exact>
+              <HomeView addFavorite={this.addFavorite} />
+            </Route>
             <Route path="/favorites" >
               <FavoritesView favorites={this.state.favoriteTips} />
-            </Route>/>
+            </Route>
             <Route path="*" component={PageNotFound} />
           </Switch>
         </div>
