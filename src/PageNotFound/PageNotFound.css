@@ -1,0 +1,10 @@
+.page-not-found-message {
+  margin-top: 40vh;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.page-not-found-message-title {
+  margin-bottom: 20px;
+  font-size: 40px;
+}

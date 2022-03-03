@@ -1,18 +1,21 @@
 import "./Navigation.css"
 import React from "react"
+import { Link } from 'react-router-dom'
 
 const Navigation = () => {
   return(
     <nav className="navigation">
-      <div className="logo">Not Financial Advice Magic 8 Ball</div>
+      <Link to="/">
+        <div className="logo">Not Financial Advice Magic 8 Ball</div>
+      </Link>
       <div className="navigation-links">
-        <div className="navigation-link">
-         HOME
-        </div>
+        <Link to="/">
+          <div className="navigation-link">HOME</div>
+        </Link>
         <div className="separator"></div>
-        <div className="navigation-link">
-         FAVORITES
-        </div> 
+        <Link to="/favorites">
+          <div className="navigation-link">FAVORITES</div> 
+        </Link>
       </div>
     </nav>
   )

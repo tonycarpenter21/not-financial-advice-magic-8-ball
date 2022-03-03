@@ -1,5 +1,10 @@
 @import-normalize;
 
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
 body {
   background: -webkit-radial-gradient(center top, rgb(239, 54, 246), rgb(1, 1, 1));
   height: 100vh;
