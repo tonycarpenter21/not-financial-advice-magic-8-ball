@@ -14,7 +14,7 @@ const FavoritesView = ({favorites, removeFavorite}) => {
         Here is a collection of all of your saved investment ideas:
       </div>
       <div className="favorites-container">
-        {favorites.length === 0 ? <p>You currently have no saved investment tips.</p> : favoriteCards}
+        {favorites.length === 0 ? <p className="no-saved-favorites">You currently have no saved investment tips.</p> : favoriteCards}
       </div>
     </div>
   )
