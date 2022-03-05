@@ -41,6 +41,7 @@
   border-radius: 50%;
   margin: -8vh;
   z-index: 1;
+  overflow: hidden;
 }
 
 .eight,
@@ -98,4 +99,124 @@
   cursor: pointer;
   /* background-color: rgb(239, 54, 246); */
   background-image: -webkit-linear-gradient(rgb(239, 54, 246), rgb(135, 0, 155));
+}
+
+@media screen and (min-device-width: 501px) and (max-device-width: 1000px) {
+  .home-container {
+    font-size: 20px;
+    margin: 5vh 20px;
+    height: 80vh;
+    justify-content: space-evenly
+  }
+  .welcome-message-header {
+    font-size: 25px;
+  }
+  .welcome-message {
+    font-size: 20px;
+  }
+  .advice-type-button,
+  .favorite-button {
+    margin: 5px 5px;
+    font-size: 20px;
+    min-width: 200px;
+  }
+  .ball {
+    margin: -5vh;
+    height: 65vh;
+    width: 65vh;
+    overflow: hidden;
+  }
+  .eight,
+  .window {
+    height: 35vh;
+    width: 35vh;
+    overflow: hidden;
+  }
+  .eight {
+    font-size: 200px;
+  }
+  .eight-ball-message{
+    max-width: 35vw;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-device-width: 376px) and (max-device-width: 500px) {
+  .home-container {
+    font-size: 15px;
+    margin: 0px 20px;
+    height: 85vh;
+    justify-content: space-evenly
+  }
+  .welcome-message-header {
+    font-size: 20px;
+  }
+  .welcome-message {
+    font-size: 15px;
+  }
+  .advice-type-button,
+  .favorite-button {
+    margin: 5px 5px;
+    font-size: 15px;
+    min-width: 50px;
+  }
+  .ball {
+    margin: -2vh;
+    height: 45vh;
+    width: 45vh;
+    overflow: hidden;
+  }
+  .eight,
+  .window {
+    height: 25vh;
+    width: 25vh;
+    overflow: hidden;
+  }
+  .eight {
+    font-size: 100px;
+  }
+  .eight-ball-message{
+    max-width: 30vw;
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 375px) {
+  .home-container {
+    margin-top: 20px!important;
+    font-size: 15px;
+    margin: 0px 20px;
+    height: 80vh;
+  }
+  .welcome-message-header {
+    font-size: 15px;
+  }
+  .welcome-message {
+    font-size: 12px;
+  }
+  .advice-type-button,
+  .favorite-button {
+    margin: 5px 5px;
+    font-size: 15px;
+    min-width: 50px;
+  }
+  .ball {
+    margin: -2vh;
+    height: 45vh;
+    width: 45vh;
+    overflow: hidden;
+  }
+  .eight,
+  .window {
+    height: 25vh;
+    width: 25vh;
+    overflow: hidden;
+  }
+  .eight {
+    font-size: 100px;
+  }
+  .eight-ball-message{
+    max-width: 30vw;
+    font-size: 12px;
+  }
 }

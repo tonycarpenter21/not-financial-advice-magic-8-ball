@@ -64,7 +64,7 @@ class HomeView extends Component {
           Welcome to the NOT FINANCIAL ADVICE MAGIC 8 BALL! 
         </div>
         <div className="welcome-message-body">
-          This tool is an excellent way find out about different investment strategies or new topics to research. None of it’s recommendations should be taken as financial advice. May the odds be ever in your favor.
+          This tool is an excellent way find out about different investment strategies or new topics to research. None of it’s recommendations should be taken as financial advice.
         </div>
       </section>
       <section className="eight-ball-container">
@@ -87,7 +87,7 @@ class HomeView extends Component {
         </div>
       </section>
       <section className="advice-type-container">
-        {this.state.currentTip === "undefined" ? <p>Pick Your Investment Inspiration Type:</p> : <p>Click Again To Receive Another Inspirational Investment Idea:</p>}
+        {this.state.currentTip === "undefined" ? <p>Pick Your Investment Inspiration Type:</p> : <p>Click Again To Generate Another Idea:</p>}
         <div className="advice-type-button-container">
           <button className="advice-type-button" name="stock" onClick={event => this.handleClick(event)}>Stocks</button>
           <button className="advice-type-button" name="both" onClick={event => this.handleClick(event)}>Both</button>
