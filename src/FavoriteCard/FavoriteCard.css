@@ -40,3 +40,15 @@
   filter: brightness(5);
   background-color: #FFFFFF77;
 }
+
+@media screen and (min-device-width: 0px) and (max-device-width: 500px) {
+  .favorite-card {
+    width: 75%;
+  }
+}
+
+@media screen and (min-device-width: 501px) and (max-device-width: 1000px) {
+  .favorite-card {
+    width: 40%;
+  }
+}

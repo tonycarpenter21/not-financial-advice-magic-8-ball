@@ -38,3 +38,39 @@
   width: 3px;
   height: 20px;
 }
+
+@media screen and (min-device-width: 601px) and (max-device-width: 600px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 10vh;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-device-width: 401px) and (max-device-width: 600px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 10vh;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-device-width: 0px) and (max-device-width: 400px) {
+  .navigation {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 10vh;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+}
