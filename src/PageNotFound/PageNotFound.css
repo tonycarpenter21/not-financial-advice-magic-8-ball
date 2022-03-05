@@ -1,7 +1,16 @@
+.not-found-gif {
+  border-radius: 10px;
+}
+
+.page-not-found-message a {
+  color: rgb(0, 200, 255);
+}
+
 .page-not-found-message {
-  margin-top: 40vh;
+  margin-top: 20vh;
   font-size: 20px;
   font-weight: 700;
+  color: #FFFFFF;
 }
 
 .page-not-found-message-title {

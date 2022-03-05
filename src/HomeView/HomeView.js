@@ -1,12 +1,13 @@
 import './HomeView.css'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 let stockTips = [
   "Buy Some Shares of ____ Stock",
   "Buy ____ Puts",
   "Buy ____ Calls",
   "Buy OTM 1 DTE ____ Calls",
-  "Costanza Method: Research ____, Come To A Conclusion, and Do The Opposite",
+  "Costanza Method: Research ____, Decide on Puts or Calls, and Buy The Opposite",
   // "Buy Gold",
   // "Liquidate Your 401k To Buy GameStop Shares",
   // "Buy Coinbase Shares Because Buying Crypto Is Complicated",
@@ -15,7 +16,7 @@ let stockTips = [
 ]
 
 let cryptoTips = [
-  "Mortgage Your Home For NFTs Of Cartoon Monkeys",
+  "Mortgage Your Home To Buy NFTs Of Cartoon Monkeys",
   "Buy Bitcoin Futures With 5x+ Leverage",
   "Ask For Your Inheritance Early and Buy Crypto With A Dog On It",
   "Buy Whatever People On Reddit Say To Buy", 
@@ -32,12 +33,16 @@ class HomeView extends Component {
     }
   }
 
-  handleClick = (value) => {
-    value === "favorite" ? this.addFavorite() : this.randomTip(value)
+  handleClick = (event) => {
+    event.target.name === "favorite" ? this.handleAddFavorite(event) : this.randomTip(event.target.name)
   }
 
-  addFavorite = () => {
-    console.log("hey")
+  handleAddFavorite = (event) => {
+    const newFavorite = {
+      id: Date.now(),
+      tip: this.state.currentTip
+    }
+    this.props.addFavorite(newFavorite)
   }
 
   randomTip = (inspirationType) => {
@@ -72,7 +77,9 @@ class HomeView extends Component {
               <div className="window ">
                 <div className="eight-ball-message">
                   {this.state.currentTip}
-                  <button className="favorite-button" value="favorite" onClick={event => this.handleClick(event.target.value)}>Favorite</button>
+                  <Link to="/favorites">
+                    <button className="favorite-button" name="favorite" onClick={event => this.handleClick(event)}>Favorite</button>
+                  </Link>
                 </div>
               </div>
             )
@@ -82,9 +89,9 @@ class HomeView extends Component {
       <section className="advice-type-container">
         {this.state.currentTip === "undefined" ? <p>Pick Your Investment Inspiration Type:</p> : <p>Click Again To Receive Another Inspirational Investment Idea:</p>}
         <div className="advice-type-button-container">
-          <button className="advice-type-button" value="stock" onClick={event => this.handleClick(event.target.value)}>Stocks</button>
-          <button className="advice-type-button" value="both" onClick={event => this.handleClick(event.target.value)}>Both</button>
-          <button className="advice-type-button" value="crypto" onClick={event => this.handleClick(event.target.value)}>Crypto</button>
+          <button className="advice-type-button" name="stock" onClick={event => this.handleClick(event)}>Stocks</button>
+          <button className="advice-type-button" name="both" onClick={event => this.handleClick(event)}>Both</button>
+          <button className="advice-type-button" name="crypto" onClick={event => this.handleClick(event)}>Crypto</button>
         </div>
       </section>
     </div>
