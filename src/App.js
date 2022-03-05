@@ -26,16 +26,17 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      favoriteTips: [
-        {id: 1, tip: "Buy Apple Stock"},
-        {id: 1, tip: "Buy gold"},
-        {id: 1, tip: "Buy Silver"},
-      ]
+      favoriteTips: []
     }
   }
 
   addFavorite = (newFavorite) => {
-    this.setState( {favoriteTips: [... this.state.favoriteTips, newFavorite]} )
+    this.setState( {favoriteTips: [...this.state.favoriteTips, newFavorite]} )
+  }
+
+  removeFavorite = (id) => {
+    const newTips = this.state.favoriteTips.filter(tip => tip.id !== id)
+    this.setState( {favoriteTips: newTips })
   }
 
   render() {
@@ -48,7 +49,7 @@ class App extends Component {
               <HomeView addFavorite={this.addFavorite} />
             </Route>
             <Route path="/favorites" >
-              <FavoritesView favorites={this.state.favoriteTips} />
+              <FavoritesView favorites={this.state.favoriteTips} removeFavorite={this.removeFavorite}/>
             </Route>
             <Route path="*" component={PageNotFound} />
           </Switch>

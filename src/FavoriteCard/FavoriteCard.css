@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: 20px 0px;
-  min-width: 25%;
+  width: 25%;
   background-color: #00000088;
   color: #FFFFFF;
   border-radius: 20px;
@@ -17,7 +17,7 @@
 }
 
 .description {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .remove-idea-button-container {

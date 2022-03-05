@@ -1,5 +1,6 @@
 import './HomeView.css'
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 let stockTips = [
   "Buy Some Shares of ____ Stock",
@@ -76,7 +77,9 @@ class HomeView extends Component {
               <div className="window ">
                 <div className="eight-ball-message">
                   {this.state.currentTip}
-                  <button className="favorite-button" name="favorite" onClick={event => this.handleClick(event)}>Favorite</button>
+                  <Link to="/favorites">
+                    <button className="favorite-button" name="favorite" onClick={event => this.handleClick(event)}>Favorite</button>
+                  </Link>
                 </div>
               </div>
             )
