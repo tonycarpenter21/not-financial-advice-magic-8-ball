@@ -1,29 +1,7 @@
 import './HomeView.css'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
-let stockTips = [
-  "Buy Some Shares of ____ Stock",
-  "Buy ____ Puts",
-  "Buy ____ Calls",
-  "Buy OTM 1 DTE ____ Calls",
-  "Costanza Method: Research ____, Decide on Puts or Calls, and Buy The Opposite",
-  // "Buy Gold",
-  // "Liquidate Your 401k To Buy GameStop Shares",
-  // "Buy Coinbase Shares Because Buying Crypto Is Complicated",
-  // "Buy Whatever People On Reddit Say To Buy",
-  // "Open a Buy Limit Order and Let Your Cat Walk Across Your Keyboard",
-]
-
-let cryptoTips = [
-  "Mortgage Your Home To Buy NFTs Of Cartoon Monkeys",
-  "Buy Bitcoin Futures With 5x+ Leverage",
-  "Ask For Your Inheritance Early and Buy Crypto With A Dog On It",
-  "Buy Whatever People On Reddit Say To Buy", 
-  "Buy Ethereum",
-  "Buy an Ethereum Killer",
-  "Buy Whatever Elon Musk Tweets About",
-]
+import {stocks, stockTips, cryptoTips} from '../tips'
 
 class HomeView extends Component {
   constructor() {
@@ -48,7 +26,16 @@ class HomeView extends Component {
   randomTip = (inspirationType) => {
     let bothChoice = stockTips.concat(cryptoTips)
     if (inspirationType === "stock") {
-      this.setState( {currentTip: stockTips[Math.floor(Math.random() * stockTips.length)]} )
+      let selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)]
+      let selectedStock = stocks[0][Math.floor(Math.random() * stocks[0].length)].symbol
+      if (selectedStockTip.split('').includes('_') === true) {
+        let splitStockTip = selectedStockTip.split('_')
+        splitStockTip.splice(1, 0, selectedStock)
+        let finalStockTip = splitStockTip.join('')
+        this.setState( {currentTip: finalStockTip} )
+      } else {
+        this.setState( {currentTip: selectedStockTip} )
+      }
     } else if (inspirationType === "crypto") {
       this.setState( {currentTip: cryptoTips[Math.floor(Math.random() * cryptoTips.length)]} )
     } else {
