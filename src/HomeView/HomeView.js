@@ -25,14 +25,17 @@ class HomeView extends Component {
 
   randomTip = (inspirationType) => {
     let bothChoice = stockTips.concat(cryptoTips)
-    console.log(stocks)
     if (inspirationType === "stock") {
       let selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)]
-      let selectedStock = stocks[Math.floor(Math.random() * stocks.length)]
-      let splitStockTip = selectedStockTip.split('_')
-      splitStockTip.splice(1, 0, selectedStock)
-      let finalStockTip = splitStockTip.join('')
-      this.setState( {currentTip: finalStockTip} )
+      let selectedStock = stocks[0][Math.floor(Math.random() * stocks[0].length)].symbol
+      if (selectedStockTip.split('').includes('_') === true) {
+        let splitStockTip = selectedStockTip.split('_')
+        splitStockTip.splice(1, 0, selectedStock)
+        let finalStockTip = splitStockTip.join('')
+        this.setState( {currentTip: finalStockTip} )
+      } else {
+        this.setState( {currentTip: selectedStockTip} )
+      }
     } else if (inspirationType === "crypto") {
       this.setState( {currentTip: cryptoTips[Math.floor(Math.random() * cryptoTips.length)]} )
     } else {

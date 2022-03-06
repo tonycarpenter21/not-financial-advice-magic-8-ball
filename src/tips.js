@@ -2,15 +2,7 @@ import fetchedStocks from './apiCalls'
 
 let stocks = []
 
-fetchedStocks().then(symbol => stocks.push(symbol))
-
-// let stocks = [
-//   "APPL",
-//   "MSFT",
-//   "UBER",
-//   "META", 
-//   "CISCO"
-// ]
+fetchedStocks().then(symbol => stocks.push(symbol.quotes))
 
 let stockTips = [
   "Buy Some Shares of _ Stock",
@@ -18,11 +10,11 @@ let stockTips = [
   "Buy _ Calls",
   "Buy OTM 1 DTE _ Calls",
   "Costanza Method: Research _, Decide on Puts or Calls, and Buy The Opposite",
-  // "Buy Gold",
-  // "Liquidate Your 401k To Buy GameStop Shares",
-  // "Buy Coinbase Shares Because Buying Crypto Is Complicated",
-  // "Buy Whatever People On Reddit Say To Buy",
-  // "Open a Buy Limit Order and Let Your Cat Walk Across Your Keyboard",
+  "Buy Gold",
+  "Liquidate Your 401k To Buy GameStop Shares",
+  "Buy Coinbase Shares Because Buying Crypto Is Complicated",
+  "Buy Whatever People On Reddit Say To Buy",
+  "Open a Buy Limit Order and Let Your Cat Walk Across Your Keyboard",
 ]
 
 let cryptoTips = [
