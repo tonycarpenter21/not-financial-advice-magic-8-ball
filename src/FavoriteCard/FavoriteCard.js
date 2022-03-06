@@ -1,4 +1,3 @@
-// import react from React
 import RemoveButton from '../x.svg'
 import './FavoriteCard.css'
 
