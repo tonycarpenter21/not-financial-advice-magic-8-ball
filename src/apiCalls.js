@@ -7,7 +7,6 @@ const fetchedStocks = () => {
       }
       })
       .then(response => response.json().then((data) => data.finance.result[0]))
-      // .then(response => response.json().then((data) => data.finance.result[0].quotes[0].symbol))
       .catch(err => {
         console.error(err);
       })

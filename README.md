@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# 🎱 Not Financial Advice Magic 8 Ball 🎱
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Click [HERE](https://frontend.turing.edu/projects/module-3/showcase.html) to view the project spec
+- Click [HERE](https://not-financial-advice-magic-8-ball-kao6vq15p-tonycarpenter21.vercel.app/favorites) to view the deployed site
 
-## Available Scripts
+## Table of Contents
+- [Abstract](#abstract)
+- [Tech Used](#tech-used)
+- [Installation and Set-Up](#installation-and-set-up)
+- [Features](#features)
+- [See the Site in Action](#see-the-site-in-action)
+- [Future Goals](#future-goals)
+- [Created By](#created-by)
+- [Credit](#credit)
 
-In the project directory, you can run:
+## Abstract
 
-### `npm start`
+*Tired of boring and predictable investment strategies like index funds? The Not Financial Advice Magic 8 Ball is here to help!*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This application lets a user generate random investment advice based on their preferred category: Stocks, Crypto, or Both. The stocks investment advice is pulled from the Yahoo Finance API for their top 5 stock picks for that given day mixed with different investment strategies such as buying stocks, calls, or puts. A user can then favorite the ideas they want to research later and view them on the favorites page. At any point a user can delete a saved ideas from the favorites page by clicking the "X" button in the upper right of the box. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Used
+- React 
+- JSX, HTML, CSS
+- Cypress Testing
+- React Router
+- Stock Data API used for Network Requests (https://yh-finance.p.rapidapi.com)
+- Project Structure Organized with [GitHub Project Board](https://github.com/tonycarpenter21/not-financial-advice-magic-8-ball/projects/1)
 
-### `npm test`
+## Installation and Set-Up
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To install this project, please see below:
 
-### `npm run build`
+```bash
+1. Clone down this Repository using `git clone`
+2. Next, `cd` into the cloned repository and `npm install` to install library dependencies
+3. Finally, run `npm start` and open up localhost at the port indicated to view the webpage
+```
+Alternatively, you can access the deployed site [HERE](https://not-financial-advice-magic-8-ball-kao6vq15p-tonycarpenter21.vercel.app/favorites)
+    
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Generate Stock or Crypto based investment ideas
+- Favorite the investment ideas to view or research at a later time
+- Delete any saved favorite investment ideas 
+- 100% lighthouse accessibility rating and 0 Errors in the WAVE Accessibility Plugin
+- Mobile, Tablet, and Computer friendly responsive design
+- Deployed website
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## See the Site in Action! 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Homepage View: 
 
-### `npm run eject`
+<img width="1000" alt="Not Financial Advice Magic 8 Ball Homepage" src="https://user-images.githubusercontent.com/88450229/156942722-b47afc7a-beb1-4468-a5e1-f0123685df46.gif">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Favorites View:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="1000" alt="Not Financial Advice Magic 8 Ball Favorites View" src="https://user-images.githubusercontent.com/88450229/156942757-eefdcedd-fe9c-458c-b7e2-68283356b9d8.gif">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This application is set up to be responsive and resizes nicely for both mobile and computer screens:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Window resizing](https://user-images.githubusercontent.com/88450229/156942767-cbbdcc2a-d81d-4977-bbe2-1bc123257115.gif)
 
-## Learn More
+## Future Goals
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Implement a shaking animation for the 8 ball before giving the user an investment idea.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Created By:
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Tony Carpenter](https://github.com/tonycarpenter21)
