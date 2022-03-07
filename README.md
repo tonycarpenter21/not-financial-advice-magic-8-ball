@@ -1,7 +1,7 @@
 # 🎱 Not Financial Advice Magic 8 Ball 🎱
 
 - Click [HERE](https://frontend.turing.edu/projects/module-3/showcase.html) to view the project spec
-- Click [HERE](https://not-financial-advice-magic-8-ball-kao6vq15p-tonycarpenter21.vercel.app/) to view the deployed site
+- Click [HERE](https://not-financial-advice-magic-8-ball-hnn1fxvtn-tonycarpenter21.vercel.app/) to view the deployed site
 
 ## Table of Contents
 - [Abstract](#abstract)
