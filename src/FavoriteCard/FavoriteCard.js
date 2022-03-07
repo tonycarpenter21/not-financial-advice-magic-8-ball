@@ -1,5 +1,6 @@
-import RemoveButton from '../x.svg'
-import './FavoriteCard.css'
+import RemoveButton from '../x.svg';
+import './FavoriteCard.css';
+import PropTypes from 'prop-types';
 
 const FavoriteCard = ({tip, number, id, removeFavorite}) => {
   return(
@@ -18,3 +19,10 @@ const FavoriteCard = ({tip, number, id, removeFavorite}) => {
 }
 
 export default FavoriteCard
+
+FavoriteCard.propTypes = {
+  tip: PropTypes.string, 
+  number: PropTypes.number,
+  id: PropTypes.number,
+  removeFavorite: PropTypes.func.isRequired
+};
