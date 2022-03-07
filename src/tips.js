@@ -16,4 +16,4 @@ let cryptoTips = [
   "Buy Whatever Elon Musk Tweets About",
 ]
 
-export { stockTips, cryptoTips}
+export { stockTips, cryptoTips }

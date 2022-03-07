@@ -1,8 +1,8 @@
-import './HomeView.css'
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { stockTips, cryptoTips } from '../tips'
-import fetchedStocks from '../apiCalls'
+import './HomeView.css';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { stockTips, cryptoTips } from '../tips';
+import fetchedStocks from '../apiCalls';
 
 class HomeView extends Component {
   constructor() {
@@ -20,7 +20,7 @@ class HomeView extends Component {
   }
 
   handleClick = (event) => {
-    event.target.name === "favorite" ? this.handleAddFavorite(event) : this.randomTip(event.target.name)
+    event.target.name === "favorite" ? this.handleAddFavorite(event) : this.randomTip(event.target.name);
   }
 
   handleAddFavorite = (event) => {
@@ -29,33 +29,33 @@ class HomeView extends Component {
       id: Date.now(),
       tip: this.state.currentTip
     }
-    this.props.addFavorite(newFavorite)
+    this.props.addFavorite(newFavorite);
   }
 
   createStockTip = () => {
-    const selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)]
-    const selectedStock = this.state.stocks[Math.floor(Math.random() * this.state.stocks.length)].symbol
+    const selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)];
+    const selectedStock = this.state.stocks[Math.floor(Math.random() * this.state.stocks.length)].symbol;
     if (selectedStockTip.split('').includes('_') === true) {
-      const splitStockTip = selectedStockTip.split('_')
-      splitStockTip.splice(1, 0, selectedStock)
-      const finalStockTip = splitStockTip.join('')
-      return this.setState( {currentTip: finalStockTip} )
+      const splitStockTip = selectedStockTip.split('_');
+      splitStockTip.splice(1, 0, selectedStock);
+      const finalStockTip = splitStockTip.join('');
+      return this.setState( {currentTip: finalStockTip} );
     } else {
-      return this.setState( {currentTip: selectedStockTip} )
+      return this.setState( {currentTip: selectedStockTip} );
     }
   }
 
   createCryptoTip = () => {
-    return this.setState( {currentTip: cryptoTips[Math.floor(Math.random() * cryptoTips.length)]} )
+    return this.setState( {currentTip: cryptoTips[Math.floor(Math.random() * cryptoTips.length)]} );
   }
 
   randomTip = (inspirationType) => {
     if (inspirationType === "stock") {
-      this.createStockTip()
+      this.createStockTip();
     } else if (inspirationType === "crypto") {
-      this.createCryptoTip()
+      this.createCryptoTip();
     } else {
-      Math.random() > .5 ? this.createStockTip() : this.createCryptoTip()
+      Math.random() > .5 ? this.createStockTip() : this.createCryptoTip();
     }
   }
 

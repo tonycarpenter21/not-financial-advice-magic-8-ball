@@ -1,11 +1,12 @@
-import React from 'react'
-import './FavoritesView.css'
-import FavoriteCard from '../FavoriteCard/FavoriteCard'
+import React from 'react';
+import './FavoritesView.css';
+import FavoriteCard from '../FavoriteCard/FavoriteCard';
+import PropTypes from 'prop-types';
 
 const FavoritesView = ({favorites, removeFavorite}) => {
   const favoriteCards = favorites.map((favorite, index) => {
     return(
-     <FavoriteCard tip={favorite.tip} id={favorite.id} number={index} removeFavorite={removeFavorite} />
+     <FavoriteCard tip={favorite.tip} id={favorite.id} key={favorite.key} number={index} removeFavorite={removeFavorite} />
     )
   })
   const favoriteResults = favorites.length === 0 ? <p className="no-saved-favorites">You currently have no saved investment tips.</p> : favoriteCards
@@ -22,3 +23,8 @@ const FavoritesView = ({favorites, removeFavorite}) => {
 }
 
 export default FavoritesView
+
+FavoritesView.propTypes = {
+  favorites: PropTypes.array, 
+  removeFavorite: PropTypes.func.isRequired
+};

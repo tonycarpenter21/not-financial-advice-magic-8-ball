@@ -1,10 +1,10 @@
 import './App.css';
 import React, { Component } from 'react';
-import Navigation from './Navigation/Navigation'
-import HomeView from './HomeView/HomeView'
+import Navigation from './Navigation/Navigation';
+import HomeView from './HomeView/HomeView';
 import FavoritesView from './FavoritesView/FavoritesView';
 import PageNotFound from './PageNotFound/PageNotFound';
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class App extends Component {
   constructor() {
@@ -15,12 +15,12 @@ class App extends Component {
   }
 
   addFavorite = (newFavorite) => {
-    this.setState( {favoriteTips: [...this.state.favoriteTips, newFavorite]} )
+    this.setState( {favoriteTips: [...this.state.favoriteTips, newFavorite]} );
   }
 
   removeFavorite = (id) => {
-    const newTips = this.state.favoriteTips.filter(tip => tip.id !== id)
-    this.setState( {favoriteTips: newTips })
+    const newTips = this.state.favoriteTips.filter(tip => tip.id !== id);
+    this.setState( {favoriteTips: newTips });
   }
 
   render() {
