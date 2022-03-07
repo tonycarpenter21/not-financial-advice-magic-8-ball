@@ -1,9 +1,3 @@
-import fetchedStocks from './apiCalls'
-
-let stocks = []
-
-fetchedStocks().then(symbol => stocks.push(symbol.quotes))
-
 let stockTips = [
   "Buy Some Shares of _ Stock",
   "Buy _ Puts",
@@ -22,4 +16,4 @@ let cryptoTips = [
   "Buy Whatever Elon Musk Tweets About",
 ]
 
-export {stocks, stockTips, cryptoTips}
+export { stockTips, cryptoTips}

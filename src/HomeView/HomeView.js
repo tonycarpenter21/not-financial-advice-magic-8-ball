@@ -1,14 +1,22 @@
 import './HomeView.css'
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {stocks, stockTips, cryptoTips} from '../tips'
+import { stockTips, cryptoTips } from '../tips'
+import fetchedStocks from '../apiCalls'
 
 class HomeView extends Component {
   constructor() {
     super();
     this.state = {
-      currentTip: "undefined",
+      currentTip: null,
+      stocks: []
     }
+  }
+
+  componentDidMount = () => {
+    fetchedStocks()
+      .then(symbol => this.setState( { stocks: [...symbol.quotes] } ))
+      .catch(err => window.alert('SERVER ERROR: SERVER CANNOT BE REACHED OR API CALL LIMIT EXCEEDED!'))
   }
 
   handleClick = (event) => {
@@ -17,6 +25,7 @@ class HomeView extends Component {
 
   handleAddFavorite = (event) => {
     const newFavorite = {
+      key: Date.now(),
       id: Date.now(),
       tip: this.state.currentTip
     }
@@ -24,12 +33,12 @@ class HomeView extends Component {
   }
 
   createStockTip = () => {
-    let selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)]
-    let selectedStock = stocks[0][Math.floor(Math.random() * stocks[0].length)].symbol
+    const selectedStockTip = stockTips[Math.floor(Math.random() * stockTips.length)]
+    const selectedStock = this.state.stocks[Math.floor(Math.random() * this.state.stocks.length)].symbol
     if (selectedStockTip.split('').includes('_') === true) {
-      let splitStockTip = selectedStockTip.split('_')
+      const splitStockTip = selectedStockTip.split('_')
       splitStockTip.splice(1, 0, selectedStock)
-      let finalStockTip = splitStockTip.join('')
+      const finalStockTip = splitStockTip.join('')
       return this.setState( {currentTip: finalStockTip} )
     } else {
       return this.setState( {currentTip: selectedStockTip} )
@@ -41,7 +50,6 @@ class HomeView extends Component {
   }
 
   randomTip = (inspirationType) => {
-    let bothChoice = stockTips.concat(cryptoTips)
     if (inspirationType === "stock") {
       this.createStockTip()
     } else if (inspirationType === "crypto") {
@@ -52,11 +60,11 @@ class HomeView extends Component {
   }
 
   investmentTypeButtonMessage = () => {
-    return this.state.currentTip === "undefined" ? <p>Pick Your Investment Inspiration Type:</p> : <p>Click Again To Generate Another Idea:</p>
+    return this.state.currentTip === null ? <p>Pick Your Investment Inspiration Type:</p> : <p>Click Again To Generate Another Idea:</p>
   }
 
   eightBallRender = () => {
-    if (this.state.currentTip === "undefined") {
+    if (this.state.currentTip === null) {
       return(
         <div className="eight">8</div>
       )
